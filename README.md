@@ -22,14 +22,17 @@ resources to help them make more sustainable choices in their daily lives. Throu
 try to solve the environmental problems related to 3rd SDG : “Good Health & Well-Being”, 12th
 SDG : "Responsible Consumption And Production" and also 13th SDG : “Climate Action”, as the
 majority of households still lack an understanding of how to live in a more environmentally
-friendly manner. There are 5 features on this application.
+friendly manner. There are 3 features on this application.
 1. News and Tips about sustainable lifestyle
 2. Marketplace for sustainable consumption
-3. Chat with others about sustainable lifestyle
 4. Carbon footprint calculator and Air Quality Index (AQI) viewer
-5. Set target sustainable lifestyle level
-The use case diagram for the app is presented on the next page. There’s also a sequence
-diagram for marketplace checkout item use cases. The diagram is presented on the last page.
+
+# Future improvement
+We believe that our application has more potential that can be developed in the future. We have planned these features to be added for the future improvement.
+1. A sustainable lifestyle forum
+2. Set target profile for sustainable (this affects general app content)
+3. Using machine learning to determine carbon footprint activities based on image taken
+4. Carbon tax paymen
 
 # Architecture
 This application is designed with microservice architecture with RPC as interservice communication protocol. Heres the simple diagram
@@ -52,6 +55,7 @@ This application is designed with microservice architecture with RPC as interser
     </td>
   </tr>
 </table>
+We use golang with gRPC as a backend, this two combines into a fast development and efficient communication machine. We also use PostgreSQL as a database.
 
 ## Mobile UI
 <table>
@@ -60,23 +64,7 @@ This application is designed with microservice architecture with RPC as interser
          <img src="https://skmkuma.com/wp-content/uploads/2021/07/flutter_logo.png" height="100px"></td>
    </tr>
 </table>
-
-# How to run
-We have provided the apk file in the root dir so you can install it easely. If you want to install manually, follow instructions provided below.
-
-## Web application
-Assume you have an active PostgreSQL database and NodeJS installed
-1. Redirect to web application folder
-2. Configure .env file with your DATABASE_URL and JWT_SECRET
-3. Run command ```npx prisma db push```
-4. Run command ```yarn dev```
-5. Open your favourite browser
-6. Navigate to http://localhost:3000
-
-## Mobile application
-Assume you have installed dart and flutter
-1. Redirect to mobile UI folder
-2. Run command
+As our main product, we use flutter as our mobile developing framework.
 
 ## Web (Admin Dashboard)
 <table>
@@ -95,8 +83,54 @@ Assume you have installed dart and flutter
     </td>
   </tr>
 </table>
+We create an admin dashboard for administrators so they can manage contents easier.
 
+# How to run
+We have provided the apk file in the root dir so you can install it easely. We also provided the google cloud run hosted admin website below
+[https](https://ecomate-web-hjmom73g2a-as.a.run.app/)
 
+there's a dummy admin :
+email : raha@eco.mate
+password : rahadian
+
+If you want to install manually, follow instructions provided below.
+
+## Web application
+Assume you have an active PostgreSQL database and NodeJS installed
+1. Redirect to web application folder
+2. Configure .env file with your DATABASE_URL and JWT_SECRET
+3. Run command ```npx prisma db push```
+4. Run command ```yarn dev```
+5. Open your favourite browser
+6. Navigate to http://localhost:3000
+
+## Mobile UI
+Assume you have installed dart and flutter, and also have a JDK installed
+1. Redirect to mobile UI folder
+2. Connect your phone (gRPC won't work on browser)
+3. Run command ```flutter pub get```
+4. Run command ```flutter run --release```
+
+## Mobile Backend
+Assume you have installed go
+1. Redirect to mobille backend folder
+2. Run ```go run main.go```
+
+# Mobile Features
+* Home Page
+![flutter_01](https://github.com/Reigenleif/ecomate-monorepo/assets/96337290/358868f0-1be2-48a8-b561-eaf505cd4078)
+![flutter_02](https://github.com/Reigenleif/ecomate-monorepo/assets/96337290/6925c669-2332-4b3d-b958-c0a024e30e92)
+
+* Marketplace
+![flutter_03](https://github.com/Reigenleif/ecomate-monorepo/assets/96337290/0036e395-f463-4142-a56e-24b127cfc347)
+![flutter_04](https://github.com/Reigenleif/ecomate-monorepo/assets/96337290/1b4a0375-8c65-44d0-892e-c0beabea425c)
+![flutter_05](https://github.com/Reigenleif/ecomate-monorepo/assets/96337290/cdcf51f1-f29c-4da9-ac3f-8e15ee80980a)
+![flutter_06](https://github.com/Reigenleif/ecomate-monorepo/assets/96337290/50419960-bb42-48a2-aa62-b5d0c5b8a67e)
+
+* News Page
+![flutter_08](https://github.com/Reigenleif/ecomate-monorepo/assets/96337290/ba6384f5-6ad5-46c6-bb65-ae6ff87107a5)
+
+And more...
 
 # Web Features
 * Admin Manage News
