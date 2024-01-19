@@ -1,5 +1,9 @@
 # ecomate-monorepo
 Merged repository for EcoMate Application
+Individual Repos :
+* Web : https://github.com/Reigenleif/ecomate-web
+* Mobile UI : https://github.com/Reigenleif/ecomate-mobile-ui
+* Mobile Backend : https://github.com/Reigenleif/ecomate-mobile-backend-service
 
 # Team Members
 * Alif Amirudin (Hacker)
@@ -32,8 +36,6 @@ This application is designed with microservice architecture with RPC as interser
 <img src="https://github.com/Reigenleif/ecomate-monorepo/assets/96337290/92985d25-cb01-4a57-9dde-d9246d5a3b76" h="300px">
 
 
-
-
 # Tech used
 
 ## Backend & Database
@@ -58,6 +60,23 @@ This application is designed with microservice architecture with RPC as interser
          <img src="https://skmkuma.com/wp-content/uploads/2021/07/flutter_logo.png" height="100px"></td>
    </tr>
 </table>
+
+# How to run
+We have provided the apk file in the root dir so you can install it easely. If you want to install manually, follow instructions provided below.
+
+## Web application
+Assume you have an active PostgreSQL database and NodeJS installed
+1. Redirect to web application folder
+2. Configure .env file with your DATABASE_URL and JWT_SECRET
+3. Run command ```npx prisma db push```
+4. Run command ```yarn dev```
+5. Open your favourite browser
+6. Navigate to http://localhost:3000
+
+## Mobile application
+Assume you have installed dart and flutter
+1. Redirect to mobile UI folder
+2. Run command
 
 ## Web (Admin Dashboard)
 <table>
